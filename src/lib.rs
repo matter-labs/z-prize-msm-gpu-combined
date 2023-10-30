@@ -39,7 +39,7 @@ pub fn multi_scalar_mult_init<G: AffineCurve>(
     points: &[G],
 ) -> MultiScalarMultContext {
 
-    let max_points = 1<<26;
+    let max_points = 1<<24;
     let max_batches = 16;
     let npoints = points.len();
     
