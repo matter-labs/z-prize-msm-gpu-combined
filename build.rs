@@ -73,6 +73,7 @@ fn main() {
         let mut nvcc = cc::Build::new();
         nvcc.cuda(true);
         nvcc.flag("-arch=sm_80");
+        nvcc.flag("-std=c++17");
         if let Some(def) = cc_opt {
             nvcc.define(def, None);
         }
